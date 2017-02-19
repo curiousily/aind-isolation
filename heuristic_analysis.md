@@ -45,3 +45,5 @@ The `tournament.py` script was run `3` times for each individual heuristic. The 
 | center moves             | 347/420 | 0.826    | 330/420      | 0.786         |
 | center moves with blanks | 346/420 | 0.823    | 333/420      | 0.792         |
 | uber                     | 348/420 | 0.828    | 363/420      | 0.864         |
+
+According to the data presented above, the `uber` heuristic performs better than the `ID_improvement` agent and all other heuristics. Further tweaking (possibly including weights to some/each parameter) of the formula might provide even more improvements.
