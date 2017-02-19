@@ -21,3 +21,17 @@ Same as the above but we scale according to the available blank squares.
 ### Implementation
 
 Call `center_moves()` and divide the result by the number of blank squares.
+
+## Uber heuristic
+
+### Intuition
+
+The ultimate heuristic (as the name suggests :) )! Rewards the player more when he has more available moves and center moves as opposed to his opponent.  Finally, the result is scaled by the player's remaining moves.
+
+### Implementation
+
+The algorithm implements the following formula:
+
+$$Score = \frac{(P_{moves} + P_{center\,moves}) - (O_{moves} + O_{center\,moves}) - \text{blank moves}}{\text{blank moves} + P_{moves} - O_{moves}}$$
+
+where $P$ is the player and $O$ is the opponent.
