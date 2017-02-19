@@ -15,6 +15,9 @@ class Timeout(Exception):
     pass
 
 def center_moves(game, player):
+    """Reward player's available moves in the center versus those of the
+    opponent
+    """
     own_moves = game.get_legal_moves(player)
     opp_moves = game.get_legal_moves(game.get_opponent(player))
     own_center_moves = len([m for m in own_moves if m in CENTER_SQUARES])
@@ -22,6 +25,9 @@ def center_moves(game, player):
     return float(own_center_moves - opp_center_moves)
 
 def center_with_blank_moves(game, player):
+    """Reward player's available moves in the center versus those of the
+    opponent scaled according to the remaining blank spaces
+    """
     own_moves = game.get_legal_moves(player)
     opp_moves = game.get_legal_moves(game.get_opponent(player))
     blank_moves = len(game.get_blank_spaces())
@@ -30,6 +36,10 @@ def center_with_blank_moves(game, player):
     return float(own_center_moves / blank_moves - opp_center_moves / blank_moves)
 
 def moves_with_centers_and_blanks(game, player):
+    """Calculates the ratio of the player moves + center moves minus the
+    opponent moves + center moves to the number of
+    free squares + player's moves - the opponent moves
+    """
     own_moves = game.get_legal_moves(player)
     opp_moves = game.get_legal_moves(game.get_opponent(player))
     blank_moves = len(game.get_blank_spaces())
