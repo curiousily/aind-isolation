@@ -30,8 +30,8 @@ The ultimate heuristic (as the name suggests :) )! Rewards the player more when 
 
 ### Implementation
 
-The algorithm implements the following formula:
+The heuristic implements the following formula:
 
-$$Score = \frac{(P_{moves} + P_{center\,moves}) - (O_{moves} + O_{center\,moves}) - \text{blank moves}}{\text{blank moves} + P_{moves} - O_{moves}}$$
+$$Score = \frac{(P_{moves} + P_{center\,moves}) - (O_{moves} + O_{center\,moves}) - B}{B + P_{moves} - O_{moves}}$$
 
-where $P$ is the player and $O$ is the opponent.
+where $P$ is the player, $O$ is the opponent and B is the number of blank squares.
