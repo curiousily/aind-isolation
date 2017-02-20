@@ -48,7 +48,7 @@ The `tournament.py` script was run `3` times for each individual heuristic. The 
 
 # Conclusion
 
-According to the data presented above, the `uber` heuristic performs better than the `ID_improvement` agent and all other heuristics. I recommend choosing this heuristic when building an agent since it is:
+According to the data presented above, the `uber` heuristic performs better than the `ID_improvement` agent and all other heuristics. I recommend choosing it when building an agent since it is:
 
 * the only heuristic that outperforms the sample agent and all other heuristics, according to the data
 * a composition of the other two heuristics (with additions), thus including their predictive power
